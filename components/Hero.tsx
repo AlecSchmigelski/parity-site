@@ -40,7 +40,7 @@ function ProductQueue({ selected, pick }: Selection) {
         <span className="mock__light" />
         <span className="mock__light" />
         <span className="mock__title">Root causes</span>
-        <span className="mock__cycle">· October 2026 · 4,812,307 accounts tested</span>
+        <span className="mock__cycle">· Example report · October 2026 · 4,812,307 accounts tested</span>
         <span className="mock__rank">RANKED BY CONSUMER HARM</span>
       </div>
       <div className="mock__body">
@@ -162,13 +162,12 @@ export function Hero() {
   return (
     <section id="top" className="hero">
       <div className="hero__inner">
+        <p className="hero__audience">For banks, credit unions, lenders and servicers</p>
         <h1>
           <span>11,402</span> errors.
           <br />7 root causes.
         </h1>
-        <p className="hero__sub">
-          Parity checks every account you report to the credit bureaus and traces each error back to what caused it.
-        </p>
+        <h3 className="hero__value">Stop credit reporting errors before they reach the bureaus.</h3>
         <div className="hero__cta">
           <a href="#audit" className="btn btn--primary">
             Start a historical audit
@@ -177,6 +176,7 @@ export function Hero() {
             See how it works
           </a>
         </div>
+        <p className="hero__note">Starts with the files you already send. No integration needed.</p>
         {config.heroVisual === "queue" ? (
           <ProductQueue selected={selected} pick={pick} />
         ) : (

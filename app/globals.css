@@ -160,6 +160,7 @@ a:hover { color: var(--blue); }
 
 .hero { background: linear-gradient(#f4f5fb, #fff 70%); padding: 80px 32px 0; }
 .hero__inner { max-width: 1200px; margin: 0 auto; text-align: center; }
+.hero__audience { font: 500 13px var(--mono); color: var(--blue); margin: 0 0 18px; }
 .hero h1 {
   font: 500 clamp(48px, 7vw, 80px) / 1 var(--sans);
   letter-spacing: -0.045em;
@@ -168,15 +169,15 @@ a:hover { color: var(--blue); }
   text-wrap: balance;
 }
 .hero h1 span { color: var(--harm); }
-.hero__sub {
-  font-size: 19px;
-  line-height: 1.5;
-  color: var(--body);
+.hero__value {
+  font: 500 clamp(21px, 2vw, 26px) / 1.25 var(--sans);
+  letter-spacing: -0.02em;
   margin: 0 auto 30px;
-  max-width: 620px;
-  text-wrap: pretty;
+  max-width: 760px;
+  text-wrap: balance;
 }
-.hero__cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px; }
+.hero__note { font-size: 14px; color: var(--body); margin: 0 0 56px; }
+.hero__cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
 
 .mock {
   max-width: 1080px;

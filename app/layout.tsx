@@ -7,7 +7,7 @@ const sans = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], 
 const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono" });
 
 const description =
-  "Parity checks every account you report to the credit bureaus and traces each error back to what caused it.";
+  "Stop credit reporting errors before they reach the bureaus.";
 
 export const metadata: Metadata = {
   title: "Parity: credit reporting accuracy testing",
