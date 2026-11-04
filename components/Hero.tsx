@@ -40,17 +40,17 @@ function ProductQueue({ selected, pick }: Selection) {
         <span className="mock__light" />
         <span className="mock__light" />
         <span className="mock__title">Root causes</span>
-        <span className="mock__cycle">· Cycle 2026-10 · 4,812,307 tradelines tested</span>
+        <span className="mock__cycle">· October 2026 · 4,812,307 accounts tested</span>
         <span className="mock__rank">RANKED BY CONSUMER HARM</span>
       </div>
       <div className="mock__body">
         <div className="mock__side">
           <div className="mock__count">
-            <span>EXCEPTIONS</span>
+            <span>ERRORS</span>
             <span>11,402</span>
           </div>
           <Dots selected={selected} />
-          <div className="mock__caption">Each dot ≈ 80 exceptions. Grey = long tail, under review.</div>
+          <div className="mock__caption">Each dot ≈ 80 errors. Grey = smaller issues, under review.</div>
         </div>
         <div className="mock__main">
           <div className="scroll-x">
@@ -86,7 +86,7 @@ function ProductQueue({ selected, pick }: Selection) {
           <div className="hypothesis">
             <div>
               <div className="hypothesis__label">
-                RCA AGENT · HYPOTHESIS · RC-{String(selected + 1).padStart(4, "0")}
+                AI AGENT · LIKELY CAUSE · RC-{String(selected + 1).padStart(4, "0")}
               </div>
               {/* Every option shares one grid cell, so the page never shifts as the text changes. */}
               <div className="swap">
@@ -118,7 +118,7 @@ function CollapsePanel({ selected, pick }: Selection) {
   return (
     <div className="collapse">
       <div>
-        <div className="collapse__label">RAW EXCEPTIONS · CYCLE 2026-10</div>
+        <div className="collapse__label">ALL ERRORS · OCTOBER 2026</div>
         <Dots selected={selected} wide />
       </div>
       <div className="collapse__list">
@@ -163,19 +163,18 @@ export function Hero() {
     <section id="top" className="hero">
       <div className="hero__inner">
         <h1>
-          <span>11,402</span> exceptions.
+          <span>11,402</span> errors.
           <br />7 root causes.
         </h1>
         <p className="hero__sub">
-          Parity tests every tradeline you furnish and traces each error to the rule, release, or edge case that
-          produced it.
+          Parity checks every account you report to the credit bureaus and traces each error back to what caused it.
         </p>
         <div className="hero__cta">
           <a href="#audit" className="btn btn--primary">
             Start a historical audit
           </a>
           <a href="#how" className="btn btn--secondary">
-            How RCA works
+            See how it works
           </a>
         </div>
         {config.heroVisual === "queue" ? (

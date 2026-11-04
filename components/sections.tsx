@@ -92,7 +92,7 @@ export function Stats() {
 export function CostOfDelay() {
   return (
     <Section number="01" title="When errors get found">
-      <h2 className="h2 cost__title">Every cycle an error goes unnoticed, it costs more to fix.</h2>
+      <h2 className="h2 cost__title">Every month an error goes unnoticed, it costs more to fix.</h2>
       <div className="scroll-x">
         <div className="cost__wrap">
           <div className="cost__chart">
@@ -116,12 +116,13 @@ export function CostOfDelay() {
       </div>
       <div className="cost__notes">
         <p>
-          Most furnishers check accuracy with syntax validation and a small annual QA sample. The real errors live in
-          edge cases like bankruptcy, forbearance, SCRA, settlements and sold accounts.
+          Most lenders check that their credit reporting files are formatted correctly, then spot-check a small sample
+          once a year. The real errors hide in unusual situations like bankruptcy, forbearance, military service,
+          settlements and sold accounts.
         </p>
         <p>
-          Releases, core conversions and portfolio transfers change the mapping rules without anyone noticing. The
-          error then repeats every cycle until a consumer or an examiner finds it.
+          System updates, conversions and portfolio sales can quietly change how account data gets reported. The error
+          then repeats every month until a consumer or an examiner finds it.
         </p>
         <div className="big-stat">
           <div className="big-stat__value">5.8M</div>
@@ -169,7 +170,7 @@ function FindingCard() {
         <span className="card__pill">CONSUMER HARM</span>
       </div>
       <div className="card__body">
-        <div className="card__title">DOFD resets after forbearance exit</div>
+        <div className="card__title">Delinquency date resets after forbearance</div>
         <div className="card__line">
           <Marker n={1} />
           <span>XC-007 v3.1</span>
@@ -246,7 +247,7 @@ export function Anatomy() {
     <Section id="how" number="02" title="Anatomy of a root cause" tone="warm">
       <h2 className="h2 anatomy__title">Thousands of failed checks, one explanation, one fix.</h2>
       <p className="intro anatomy__intro">
-        This is what a single Parity root cause looks like, from the rule that failed to the cycle that confirmed the
+        This is what a single Parity root cause looks like, from the rule that failed to the month that confirmed the
         fix.
       </p>
       <div className="anatomy">
@@ -260,11 +261,11 @@ export function Anatomy() {
 
 export function Coverage() {
   return (
-    <Section number="03" title="Coverage" tone="rule">
+    <Section number="03" title="What gets checked" tone="rule">
       <h2 className="h2">Start with the files you already send. Add more data to unlock deeper checks.</h2>
       <p className="intro coverage__intro">
-        Three layers of checks run on outbound Metro 2 files alone. Connecting your system of record adds ledger
-        reconciliation and event checks.
+        Three kinds of checks run on the Metro 2 files you already send to the bureaus. Connecting your loan system lets
+        Parity compare those files with what actually happened on each account.
       </p>
       <div className="scroll-x">
         <div className="matrix">
@@ -274,7 +275,7 @@ export function Coverage() {
             <div className="matrix__monitoring">CONTINUOUS MONITORING</div>
           </div>
           <div className="matrix__grid matrix__columns">
-            <div>CHECK LAYER</div>
+            <div>TYPE OF CHECK</div>
             {matrixColumns.map((c) => (
               <div key={c}>{c}</div>
             ))}
@@ -308,13 +309,13 @@ function RolePill({ value }: { value: LaborRole }) {
 
 export function DivisionOfLabor() {
   return (
-    <Section number="04" title="Division of labor" tone="tint">
+    <Section number="04" title="Who does what" tone="tint">
       <h2 className="h2 labor__title">Rules decide what&apos;s wrong. Agents explain why.</h2>
       <div className="labor">
         <div className="labor__row labor__row--head">
           <span>RESPONSIBILITY</span>
-          <span>DETERMINISTIC RULES</span>
-          <span>AGENTS</span>
+          <span>FIXED RULES</span>
+          <span>AI AGENTS</span>
         </div>
         {labor.map((row) => (
           <div key={row.task} className="labor__row">
@@ -347,8 +348,8 @@ export function HistoricalAudit() {
     <Section id="audit" number="05" title="Historical audit" tone="dark">
       <h2 className="h2">Files in. Findings out. 14 days.</h2>
       <p className="intro audit__intro">
-        Send 12 to 24 months of outbound Metro 2 files under NDA. You don&apos;t need to integrate anything, and a
-        credit reporting expert reviews the report before it reaches you.
+        Send us 12 to 24 months of the Metro 2 files you already send to the bureaus, under NDA. There&apos;s nothing to
+        integrate, and a credit reporting expert reviews the report before it reaches you.
       </p>
       <div className="scroll-x days-wrap">
         <div className="days" aria-hidden="true">
@@ -378,7 +379,7 @@ export function HistoricalAudit() {
             View a sample report
           </a>
         </div>
-        <span className="audit__note">Can be run as a privileged engagement through your counsel.</span>
+        <span className="audit__note">Can be run through your lawyers to keep it privileged.</span>
       </div>
     </Section>
   );
@@ -447,7 +448,7 @@ export function Footer() {
           <a href={links.careers}>Careers</a>
           <a href={links.privacy}>Privacy</a>
         </div>
-        <span>Parity reports findings. The furnisher decides. © 2026</span>
+        <span>Parity reports findings. You decide. © 2026</span>
       </div>
     </footer>
   );

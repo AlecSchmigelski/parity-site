@@ -7,10 +7,10 @@ const sans = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], 
 const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono" });
 
 const description =
-  "Parity tests every tradeline you furnish and traces each error to the rule, release, or edge case that produced it.";
+  "Parity checks every account you report to the credit bureaus and traces each error back to what caused it.";
 
 export const metadata: Metadata = {
-  title: "Parity: Metro 2 accuracy testing and root cause analysis",
+  title: "Parity: credit reporting accuracy testing",
   description,
   openGraph: { title: "Parity", description, type: "website" },
   // Preview builds ask search engines to stay away. Remove NEXT_PUBLIC_NOINDEX at launch.
