@@ -170,11 +170,11 @@ a:hover { color: var(--blue); }
 }
 .hero h1 span { color: var(--harm); }
 .hero__value {
-  font: 500 clamp(21px, 2vw, 26px) / 1.25 var(--sans);
-  letter-spacing: -0.02em;
+  font: 400 19px / 1.5 var(--sans);
+  color: var(--body);
   margin: 0 auto 30px;
-  max-width: 760px;
-  text-wrap: balance;
+  max-width: 620px;
+  text-wrap: pretty;
 }
 .hero__note { font-size: 14px; color: var(--body); margin: 0 0 56px; }
 .hero__cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
